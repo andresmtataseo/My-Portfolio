@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@theme {
+  --font-sans: "Roboto", "sans-serif";
+  --font-hero: "Syne", "sans-serif";
+}
+@plugin "daisyui" {
+  themes: winter --default;
+  /*themes: winter --default, winter --prefersdark, winter, winter, winter;*/
+}
+@plugin "daisyui/theme" {
+  name: "winter";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0.003 247.858);
+  --color-base-200: oklch(97% 0.014 254.604);
+  --color-base-300: #7DA0CA;
+  --color-base-content: oklch(88.51% 0.032 282.339);
+  --color-primary: #052659;
+  --color-primary-content: oklch(91.372% 0.051 257.57);
+  --color-secondary: #5483B3;
+  --color-secondary-content: oklch(41.886% 0.053 255.824);
+  --color-accent: #021024;
+  --color-accent-content: oklch(83.923% 0.012 257.651);
+  --color-neutral: #021024;
+  --color-neutral-content: oklch(83.923% 0.012 257.651);
+  --color-info: oklch(88.127% 0.085 214.515);
+  --color-info-content: oklch(17.625% 0.017 214.515);
+  --color-success: oklch(80.494% 0.077 197.823);
+  --color-success-content: oklch(16.098% 0.015 197.823);
+  --color-warning: oklch(89.172% 0.045 71.47);
+  --color-warning-content: oklch(17.834% 0.009 71.47);
+  --color-error: oklch(73.092% 0.11 20.076);
+  --color-error-content: oklch(14.618% 0.022 20.076);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}

@@ -1,0 +1,16 @@
+.tech-badge {
+  /* Usamos la variable para el color base y el borde */
+  color: var(--badge-color);
+  border-color: var(--badge-color);
+  background-color: transparent;
+
+  /* Al pasar el mouse (Hover) */
+  &:hover {
+    /* El fondo se rellena con el color dinámico */
+    background-color: var(--badge-color);
+    /* El texto se vuelve blanco (o negro) para contraste */
+    color: white; 
+    /* Quitamos el borde o lo dejamos igual */
+    border-color: var(--badge-color);
+  }
+}

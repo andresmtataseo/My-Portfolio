@@ -1,0 +1,331 @@
+<app-header></app-header>
+
+<section id="home" class="text-center py-20 lg:pt-20 lg:pb-0">
+
+    <h1 class="text-5xl md:text-8xl font-black text-primary relative z-0 tracking-wider">
+        I'M A <span class="text-secondary">SOFTWARE</span>
+    </h1>
+
+    <div class="relative flex flex-col items-center">
+
+        <h1 class="text-5xl md:text-8xl font-black text-primary relative z-0 tracking-wider">
+            ENGINEER
+        </h1>
+
+        <img src="hero.png" alt="Software Engineer Image"
+            class="hidden lg:block mx-auto w-1/4 relative z-10 -mt-24 md:-mt-12">
+
+    </div>
+
+</section>
+<section id="about" class="bg-primary py-20">
+
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <div class="flex justify-center md:justify-end">
+            <img src="about.png" alt="Foto de Andres Moreno"
+                class="w-full max-w-md rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-300">
+        </div>
+
+        <div class="text-left">
+            <p class="font-mono font-bold mb-2 text-base-300 tracking-wider">
+                HOLA
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-hero">
+                Soy Andrés Moreno
+            </h2>
+
+            <p class="text-white/80 text-lg leading-relaxed mb-4">
+                Ingeniero en Informática egresado de la Universidad Rafael Belloso Chacín (URBE), destacando con un promedio académico de <strong>18.11 pts / 20 pts</strong>. Complementé mi formación con un Diplomado en Full Stack Web Development, alcanzando una calificación de excelencia de <strong>19.85 pts / 20 pts</strong>.
+            </p>
+
+            <p class="text-white/80 text-lg leading-relaxed mb-8">
+                Actualmente me desempeño como Analista de TI y Desarrollador Full Stack, especializándome en la creación de ecosistemas digitales que integran Backend (<strong>Spring Boot/Java</strong>) y Frontend (<strong>Angular</strong>). Me defino como un profesional autodidacta, analítico y disciplinado, enfocado en aportar valor a través de código limpio y arquitecturas escalables.
+            </p>
+
+            <div>
+                <h3 class="text-white font-bold mb-4 flex items-center gap-2 tracking-wide">
+                    <span class="w-8 h-1 bg-secondary rounded-full"></span> Habilidades Técnicas
+                </h3>
+
+                <div class="flex flex-wrap gap-3">
+                    @for (skill of skills; track skill) {
+                    <span
+                        class="badge badge-lg border-none text-white bg-white/10 hover:bg-white/20 transition-colors cursor-default">
+                        {{ skill }}
+                    </span>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects" class="py-20 bg-base-200">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-center font-hero text-primary mb-4">
+                Proyectos
+            </h2>
+            <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+        </div>
+
+        <div class="flex flex-col gap-12">
+
+            @for (project of projects; track project.title) {
+
+            <div
+                class="card lg:card-side bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-base-200">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 lg:p-12">
+
+                    <div class="mockup-window border border-gray-200 bg-base-200 w-full shadow-inner">
+                        <div class="grid place-content-center bg-base-100 h-64 md:h-80 overflow-hidden relative">
+
+                            @if (project.image) {
+                            <img [src]="project.image" [alt]="project.title"
+                                class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity">
+                            } @else {
+                            <div class="text-center p-6 opacity-20">
+                                <span class="text-6xl font-black font-hero">{{ project.title.charAt(0) }}</span>
+                            </div>
+                            }
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col">
+
+                        <div>
+                            <span
+                                class="badge badge-ghost border-secondary/30 text-secondary mb-4 font-bold tracking-widest">
+                                {{ project.type }}
+                            </span>
+                        </div>
+
+                        <h3 class="text-3xl font-bold text-primary mb-4 font-display">
+                            {{ project.title }}
+                        </h3>
+
+                        <p class="text-primary/80 mb-6 leading-relaxed">
+                            {{ project.description }}
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            @for (tech of project.technologies; track tech.name) {
+                            <span class="badge badge-outline transition-colors duration-300 tech-badge"
+                                [style.--badge-color]="tech.color">
+                                {{ tech.name }}
+                            </span>
+                            }
+                        </div>
+
+                        <div>
+                            <a [href]="project.repoLink" target="_blank" rel="noopener noreferrer"
+                                class="text-secondary font-bold hover:text-primary transition-colors duration-300">
+                                Link al repositorio
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            }
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="bg-primary py-20 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold font-hero text-white mb-4">Experiencia</h2>
+            <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+
+            <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-0.5 bg-white/20"></div>
+
+            @for (exp of experiences; track $index; let i = $index; let isEven = $even) {
+
+            <div class="relative mb-16 group">
+
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
+
+                    <div class="flex md:w-1/2 md:pr-12 md:justify-end w-full pl-20 md:pl-0 order-1">
+
+                        @if (isEven) {
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/10 w-full md:text-right hover:bg-white/15 transition-colors duration-300">
+                            <span class="text-secondary font-bold text-sm block mb-1 tracking-wider uppercase">{{
+                                exp.period }}</span>
+                            <h3 class="text-2xl font-display font-bold text-white mb-1">{{ exp.role }}</h3>
+                            <h4 class="text-white/70 font-medium mb-4">{{ exp.company }}</h4>
+
+                            <ul class="text-white/80 text-sm space-y-2">
+                                @for (item of exp.description; track item) {
+                                <li class="flex gap-2 md:flex-row-reverse items-start">
+                                    <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>{{ item }}</span>
+                                </li>
+                                }
+                            </ul>
+                        </div>
+                        }
+
+                    </div>
+
+                    <div
+                        class="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-8 h-8 rounded-full bg-secondary border-4 border-primary z-20 top-0 md:top-8">
+                    </div>
+
+                    <div class="flex md:w-1/2 md:pl-12 w-full pl-20 md:pl-0 mt-8 md:mt-0 order-2">
+
+                        @if (!isEven) {
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/10 w-full hover:bg-white/15 transition-colors duration-300">
+                            <span class="text-secondary font-bold text-sm block mb-1 tracking-wider uppercase">{{
+                                exp.period }}</span>
+                            <h3 class="text-2xl font-display font-bold text-white mb-1">{{ exp.role }}</h3>
+                            <h4 class="text-white/70 font-medium mb-4">{{ exp.company }}</h4>
+
+                            <ul class="text-white/80 text-sm space-y-2">
+                                @for (item of exp.description; track item) {
+                                <li class="flex gap-2 items-start">
+                                    <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>{{ item }}</span>
+                                </li>
+                                }
+                            </ul>
+                        </div>
+                        }
+
+                    </div>
+
+                </div>
+            </div>
+
+            }
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="bg-base-200 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-center font-hero text-primary mb-4">Contacto</h2>
+            <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+        </div>
+
+        <div
+            class="relative bg-gradient-to-br from-primary to-accent rounded-4xl p-8 lg:p-16 shadow-2xl overflow-hidden">
+
+            <div class="relative grid grid-cols-1 lg:grid-cols-2 items-center">
+
+                <div class="text-left">
+
+                    <span
+                        class="badge badge-ghost border-secondary/30 bg-white/10 text-secondary mb-4 font-bold tracking-widest p-4">{{fecha}}</span>
+
+                    <h2 class="text-4xl md:text-5xl font-hero font-bold text-white mb-6 leading-tight">
+                        ¿Buscas fortalecer tu <span class="text-secondary">equipo de desarrollo?</span>
+                    </h2>
+
+                    <p class="text-white/70 text-lg mb-10 leading-relaxed max-w-lg">
+                        Estoy en búsqueda activa de oportunidades profesionales donde pueda aportar mi experiencia en
+                        arquitecturas escalables y desarrollo Full Stack. Listo para integrarme a tu equipo y generar
+                        impacto desde el primer día.
+                    </p>
+
+                    <div class="space-y-6">
+
+                        <div class="flex items-center gap-3 md:gap-5 group">
+
+                            <div
+                                class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-secondary border border-white/10 group-hover:bg-secondary group-hover:text-primary transition-all duration-300 shadow-inner">
+                                <img src="mail.svg" alt="Mail Icon" class="w-6 h-6 md:w-8 md:h-8">
+                            </div>
+
+                            <div class="min-w-0 flex-1">
+                                <p class="text-xs text-white/50 font-bold uppercase tracking-wider mb-1">
+                                    Correo Electrónico
+                                </p>
+
+                                <a href="mailto:andresmoreno2001@gmail.com"
+                                    class="block text-base md:text-xl font-bold text-white hover:text-secondary transition-colors break-all leading-tight">
+                                    andresmoreno2001@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 md:gap-5 group">
+
+                            <div
+                                class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-secondary border border-white/10 group-hover:bg-secondary group-hover:text-primary transition-all duration-300 shadow-inner">
+                                <img src="world.svg" alt="World Icon" class="w-6 h-6 md:w-8 md:h-8">
+                            </div>
+
+                            <div class="min-w-0 flex-1">
+                                <p class="text-xs text-white/50 font-bold uppercase tracking-wider mb-1">
+                                    Ubicación
+                                </p>
+                                <p class="text-base md:text-xl font-bold text-white leading-tight">
+                                    Maracaibo, Venezuela
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center lg:items-end">
+
+                    <div class="flex flex-col items-center">
+                        <div class="relative group my-12">
+                            <a href="mailto:andresmoreno2001@gmail.com"
+                                class="relative btn btn-lg bg-secondary text-base-100 border-none hover:bg-primary hover:text-white px-10 py-4 rounded-full font-bold text-xl shadow-xl flex items-center gap-3 h-auto">
+                                Agendar Entrevista
+                            </a>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <a href="https://github.com/andresmtataseo" target="_blank"
+                                class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 hover:scale-110 hover:border-white transition-all duration-300 backdrop-blur-sm">
+                                <img src="github.svg" class="w-8 h-8" alt="GitHub">
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/andresmtataseo" target="_blank"
+                                class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 hover:scale-110 hover:border-white transition-all duration-300 backdrop-blur-sm">
+                                <img src="linkedin.svg" class="w-8 h-8" alt="LinkedIn">
+                            </a>
+
+                            <a href="https://wa.me/584246719783" target="_blank"
+                                class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 hover:scale-110 hover:border-white transition-all duration-300 backdrop-blur-sm">
+                                <img src="whatsapp.svg" class="w-8 h-8" alt="WhatsApp">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>
