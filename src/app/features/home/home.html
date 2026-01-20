@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<section id="home" class="text-center py-20 lg:pt-20 lg:pb-0">
+<section id="home" class="text-center py-20 lg:pt-20 lg:pb-0 px-4">
 
     <h1 class="text-5xl md:text-8xl font-black text-primary relative z-0 tracking-wider">
         I'M A <span class="text-secondary">SOFTWARE</span>
@@ -18,9 +18,10 @@
     </div>
 
 </section>
+
 <section id="about" class="bg-primary py-20">
 
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         <div class="flex justify-center md:justify-end">
             <img src="about.png" alt="Foto de Andres Moreno"
@@ -37,11 +38,17 @@
             </h2>
 
             <p class="text-white/80 text-lg leading-relaxed mb-4">
-                Ingeniero en Informática egresado de la Universidad Rafael Belloso Chacín (URBE), destacando con un promedio académico de <strong>18.11 pts / 20 pts</strong>. Complementé mi formación con un Diplomado en Full Stack Web Development, alcanzando una calificación de excelencia de <strong>19.85 pts / 20 pts</strong>.
+                Ingeniero en Informática egresado de la Universidad Rafael Belloso Chacín (URBE), destacando con un
+                promedio académico de <strong>18.11 pts / 20 pts</strong>. Complementé mi formación con un Diplomado en
+                Full Stack Web Development, alcanzando una calificación de excelencia de <strong>19.85 pts / 20
+                    pts</strong>.
             </p>
 
             <p class="text-white/80 text-lg leading-relaxed mb-8">
-                Actualmente me desempeño como Analista de TI y Desarrollador Full Stack, especializándome en la creación de ecosistemas digitales que integran Backend (<strong>Spring Boot/Java</strong>) y Frontend (<strong>Angular</strong>). Me defino como un profesional autodidacta, analítico y disciplinado, enfocado en aportar valor a través de código limpio y arquitecturas escalables.
+                Actualmente me desempeño como Analista de TI y Desarrollador Full Stack, especializándome en la creación
+                de ecosistemas digitales que integran Backend (<strong>Spring Boot/Java</strong>) y Frontend
+                (<strong>Angular</strong>). Me defino como un profesional autodidacta, analítico y disciplinado,
+                enfocado en aportar valor a través de código limpio y arquitecturas escalables.
             </p>
 
             <div>
@@ -64,7 +71,8 @@
 </section>
 
 <section id="projects" class="py-20 bg-base-200">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold text-center font-hero text-primary mb-4">
@@ -150,7 +158,8 @@
 
         <div class="relative max-w-4xl mx-auto">
 
-            <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-0.5 bg-white/20"></div>
+            <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-0.5 bg-white/20">
+            </div>
 
             @for (exp of experiences; track $index; let i = $index; let isEven = $even) {
 
