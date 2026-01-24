@@ -2,7 +2,9 @@
 
 <section id="home" class="min-h-screen bg-base-200 flex flex-col justify-between relative overflow-hidden">
 
-    <div class="pt-32 md:pt-36 text-center flex-none z-10 px-4">
+    <div class="pt-32 md:pt-36 text-center flex-none z-10 px-4" 
+         data-aos="fade-down" 
+         data-aos-duration="1200">
         <h1 class="text-7xl md:text-9xl font-black text-primary relative z-0 tracking-wider">
             I'M A <span class="text-secondary">SOFTWARE</span>
         </h1>
@@ -11,7 +13,10 @@
         </h2>
     </div>
 
-    <a href="#about" class="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-50 group cursor-pointer bg-base-100/60 rounded-full p hover:bg-base-100/80 transition-colors duration-300">
+    <a href="#about" 
+       data-aos="zoom-in" 
+       data-aos-delay="800"
+       class="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-50 group cursor-pointer bg-base-100/60 rounded-full p hover:bg-base-100/80 transition-colors duration-300">
         <div class="relative w-28 h-28 md:w-32 md:h-32 flex items-center justify-center">
             
             <svg class="w-full h-full animate-[spin_10s_linear_infinite] group-hover:animate-none fill-current text-primary" viewBox="0 0 100 100">
@@ -34,15 +39,18 @@
     </a>
 
     <img src="hero.png" alt="Foto de Andres Moreno"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="1000"
         class="block mx-auto relative z-10 flex-1 object-contain object-bottom w-full md:w-auto max-h-[50vh] md:max-h-full -mt-24">
 
 </section>
 
-<section id="about" class="bg-primary py-20">
+<section id="about" class="bg-primary py-20 overflow-hidden">
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        <div class="text-left">
+        <div class="text-left" data-aos="fade-right">
             <p class="font-mono font-bold mb-2 text-base-300 tracking-wider">
                 HOLA
             </p>
@@ -65,7 +73,7 @@
                 enfocado en aportar valor a través de código limpio y arquitecturas escalables.
             </p>
 
-            <div>
+            <div data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-white font-bold mb-4 flex items-center gap-2 tracking-wide">
                     <span class="w-8 h-1 bg-secondary rounded-full"></span> Habilidades Técnicas
                 </h3>
@@ -81,7 +89,7 @@
             </div>
         </div>
 
-        <div class="hidden md:block flex justify-center md:justify-end">
+        <div class="hidden md:block flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="200">
             <img src="about.png" alt="Foto de Andres Moreno"
                 class="w-full max-w-md rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-300">
         </div>
@@ -93,7 +101,7 @@
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-down">
             <h2 class="text-4xl md:text-5xl font-bold text-center font-hero text-primary mb-4">
                 Proyectos
             </h2>
@@ -104,7 +112,7 @@
 
             @for (project of projects; track project.title) {
 
-            <div
+            <div data-aos="fade-up"
                 class="card lg:card-side bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-base-200">
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 lg:p-12">
@@ -170,7 +178,7 @@
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-in">
             <h2 class="text-4xl md:text-5xl font-bold font-hero text-white mb-4">Experiencia</h2>
             <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
         </div>
@@ -189,7 +197,7 @@
                     <div class="flex md:w-1/2 md:pr-12 md:justify-end w-full pl-20 md:pl-0 order-1">
 
                         @if (isEven) {
-                        <div
+                        <div data-aos="fade-right"
                             class="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/10 w-full md:text-right hover:bg-white/15 transition-colors duration-300">
                             <span class="text-secondary font-bold text-sm block mb-1 tracking-wider uppercase">{{
                                 exp.period }}</span>
@@ -213,14 +221,14 @@
 
                     </div>
 
-                    <div
+                    <div data-aos="zoom-in"
                         class="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-8 h-8 rounded-full bg-secondary border-4 border-primary z-20 top-0 md:top-8">
                     </div>
 
                     <div class="flex md:w-1/2 md:pl-12 w-full pl-20 md:pl-0 mt-8 md:mt-0 order-2">
 
                         @if (!isEven) {
-                        <div
+                        <div data-aos="fade-left"
                             class="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/10 w-full hover:bg-white/15 transition-colors duration-300">
                             <span class="text-secondary font-bold text-sm block mb-1 tracking-wider uppercase">{{
                                 exp.period }}</span>
@@ -256,12 +264,12 @@
 
     <div class="max-w-6xl mx-auto">
 
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-down">
             <h2 class="text-4xl md:text-5xl font-bold text-center font-hero text-primary mb-4">Contacto</h2>
             <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
         </div>
 
-        <div
+        <div data-aos="zoom-in-up" data-aos-duration="1000"
             class="relative bg-gradient-to-br from-primary to-accent rounded-4xl p-8 lg:p-16 shadow-2xl overflow-hidden">
 
             <div class="relative grid grid-cols-1 lg:grid-cols-2 items-center">
