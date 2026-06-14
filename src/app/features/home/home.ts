@@ -93,6 +93,8 @@ export class Home {
       period: 'Oct 2025 — Actualidad',
       description: [
         'Diseño y desarrollo soluciones Full Stack para la automatización de procesos operativos, orquestando la integración eficiente entre bases de datos y APIs REST.',
+        'Implemento integraciones mediante API para la conciliación bancaria automatizada con entidades bancarias, optimizando la gestión financiera.',
+        'Desarrollo la conexión vía API con empresas de transporte para automatizar el proceso de liquidación de guías de carga, agilizando la logística operativa.',
         'Ejecuto el mantenimiento preventivo y correctivo del parque informático, realizando diagnósticos avanzados de hardware para garantizar la continuidad operativa de las estaciones de trabajo.',
         'Aseguro la integridad de la red corporativa gestionando identidades, permisos y políticas de grupo (GPO) mediante Active Directory.',
         'Brindo soporte técnico, diagnosticando y resolviendo incidencias críticas de hardware y software para minimizar tiempos de inactividad.'
